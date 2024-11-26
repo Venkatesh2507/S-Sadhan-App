@@ -9,10 +9,11 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import com.example.ssadhan.databinding.ActivityMainBinding;
+import com.example.ssadhan.databinding.ActivityLanguageBinding;
+
 
 public class LanguageActivity extends AppCompatActivity {
-    public ActivityMainBinding binding;
+    public ActivityLanguageBinding binding;
     private int selectedCV = 0;
     ConstraintLayout layout;
     TextView textView1,textView2;
@@ -20,7 +21,7 @@ public class LanguageActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        binding = ActivityLanguageBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         binding.englishCv.setOnClickListener(new View.OnClickListener() {
