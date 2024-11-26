@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">S Sadhan</string>
+    <string name="english">English</string>
+    <string name="hindi">हिन्दी</string>
+    <string name="marathi">मराठी</string>
+    <string name="text">Enter your mobile number</string>
+    <string name="verifyotp">Verify OTP</string>
+    <string name="time_remaining">Time remaining</string>
+    <string name="enter_pin">Enter Pin</string>
+    <string name="forgot_pin">Forgot Pin?</string>
+    <string name="reset_pin">Reset Pin</string>
+    <string name="checking_kyc">We are checking your \nKYC status</string>
+    <string name="investment_oppurtunites">Meanwhile explore investment \nopportunities!</string>
+    <string name="form_submission">Your form is submitted\n We will update you</string>
+    <string name="collections">Explore our collections</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
