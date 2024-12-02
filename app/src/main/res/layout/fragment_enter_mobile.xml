@@ -13,7 +13,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/app_logo"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="25dp"
     />
 
     <com.denzcoskun.imageslider.ImageSlider
@@ -47,7 +47,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:fontFamily="@font/inder"
-                android:text="Verify your number"
+                android:textStyle="bold"
+                android:text="Verify your mobile number"
                 android:textSize="24sp"
                 />
             <androidx.appcompat.widget.AppCompatEditText
@@ -104,6 +105,7 @@
                 android:background="@drawable/cardview_background"
                 android:fontFamily="@font/inder"
                 android:text="Submit"
+                android:textAllCaps="false"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textSize="20sp"

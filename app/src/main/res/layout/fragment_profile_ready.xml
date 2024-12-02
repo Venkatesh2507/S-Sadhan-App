@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/onboarding_cardview_background"
-            android:padding="30dp"
+            android:padding="20dp"
             >
 
             <TextView
@@ -88,6 +88,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             android:text="Stock \ntrading"
                             android:textSize="15sp"
+                            android:gravity="center"
                             android:textColor="#182F64"
                             android:textStyle="bold"
                             />
@@ -121,8 +122,9 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            android:text="Mutual \n  funds"
+                            android:text="Mutual \nfunds"
                             android:textSize="15sp"
+                            android:gravity="center"
                             android:textColor="#182F64"
                             android:textStyle="bold"
                             />

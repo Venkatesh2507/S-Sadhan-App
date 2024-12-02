@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 <item android:id="@+id/stocksFragment"
-    android:title="Stocks"
+    android:title="@string/stocks"
     android:icon="@drawable/trade"
     />
     <item android:id="@+id/mutualFundsFragment"
-    android:title="Mutual Funds"
+    android:title="@string/mutual_funds"
     android:icon="@drawable/filled"
     />
     <item android:id="@+id/knowledgeFragment"
-        android:title="Knowledge"
+        android:title="@string/knowledge"
         android:icon="@drawable/book_open"
         />
     <item android:id="@+id/profileFragment"
-        android:title="Profile"
+        android:title="@string/profile"
         android:icon="@drawable/user"
         />
 

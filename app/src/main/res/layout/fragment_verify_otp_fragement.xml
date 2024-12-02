@@ -13,7 +13,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/app_logo"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="10dp"
         />
 
     <com.denzcoskun.imageslider.ImageSlider
@@ -24,7 +24,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
-
         />
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -49,6 +48,8 @@
                 app:layout_constraintTop_toTopOf="parent"
                 android:fontFamily="@font/inder"
                 android:text="@string/verifyotp"
+                android:textStyle="bold"
+
                 android:textSize="24sp"
                 />
             <LinearLayout
@@ -70,7 +71,6 @@
                 android:layout_height="60dp"
                 android:layout_weight="1"
                 android:layout_margin="8dp"
-
                 android:background="@drawable/otp_background"
                 android:gravity="center"
                 android:inputType="numberPassword"
@@ -172,6 +172,7 @@
                 android:background="@drawable/cardview_background"
                 android:fontFamily="@font/inder"
                 android:text="Submit"
+                android:textAllCaps="false"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textSize="20sp"
