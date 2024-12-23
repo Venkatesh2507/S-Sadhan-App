@@ -13,6 +13,6 @@ public class LumpSumFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_lump_sum, container, false);
+        return inflater.inflate(R.layout.fragment_mutual_fund_lumpsum_transaction, container, false);
     }
 }

@@ -9,7 +9,7 @@
         android:id="@+id/mutualFundFragment"
         android:name="com.example.ssadhan.MutualFundFragment"
         android:label="fragment_mutual_fund"
-        tools:layout="@layout/fragment_mutual_fund" >
+        tools:layout="@layout/fragment_mutual_fund_transaction" >
         <action
             android:id="@+id/action_mutualFundFragment_to_stockWithProtfolioFragment"
             app:destination="@id/stockWithProtfolioFragment" />

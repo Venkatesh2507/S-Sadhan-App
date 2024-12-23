@@ -30,8 +30,6 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         binding.bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
 
-
-
         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new StockWithProtfolioFragment()).commit();
 
     }

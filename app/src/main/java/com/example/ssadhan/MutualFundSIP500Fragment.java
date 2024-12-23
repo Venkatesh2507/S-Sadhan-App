@@ -14,6 +14,6 @@ public class MutualFundSIP500Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mutual_fund_s_i_p500, container, false);
+        return inflater.inflate(R.layout.fragment_mf_sip500_transact, container, false);
     }
 }

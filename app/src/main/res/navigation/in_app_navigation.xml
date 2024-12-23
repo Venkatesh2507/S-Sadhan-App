@@ -9,7 +9,7 @@
         android:id="@+id/mutualFundFragment2"
         android:name="com.example.ssadhan.MutualFundFragment"
         android:label="fragment_mutual_fund"
-        tools:layout="@layout/fragment_mutual_fund" >
+        tools:layout="@layout/fragment_mutual_fund_transaction" >
         <action
             android:id="@+id/action_mutualFundFragment2_to_SIPFragment"
             app:destination="@id/SIPFragment" />
@@ -30,7 +30,7 @@
         android:id="@+id/SIPFragment"
         android:name="com.example.ssadhan.SIPFragment"
         android:label="fragment_s_i_p"
-        tools:layout="@layout/fragment_s_i_p" >
+        tools:layout="@layout/fragment_mutual_fund_sip_transact" >
         <action
             android:id="@+id/action_SIPFragment_to_mutualFundSIP500Fragment"
             app:destination="@id/mutualFundSIP500Fragment" />
@@ -42,30 +42,30 @@
         android:id="@+id/MFSearchFragment"
         android:name="com.example.ssadhan.MFSearchFragment"
         android:label="fragment_m_f_search"
-        tools:layout="@layout/fragment_m_f_search" />
+        tools:layout="@layout/fragment_mutual_fund_search_view" />
     <fragment
         android:id="@+id/MFPortfolioFragment"
         android:name="com.example.ssadhan.MFPortfolioFragment"
         android:label="fragment_m_f_portfolio"
-        tools:layout="@layout/fragment_m_f_portfolio" />
+        tools:layout="@layout/fragment_m_f_transaction_portfolio" />
     <fragment
         android:id="@+id/lumpSumFragment"
         android:name="com.example.ssadhan.LumpSumFragment"
         android:label="fragment_lump_sum"
-        tools:layout="@layout/fragment_lump_sum" />
+        tools:layout="@layout/fragment_mutual_fund_lumpsum_transaction" />
     <fragment
         android:id="@+id/MFBeginners"
         android:name="com.example.ssadhan.MFBeginners"
         android:label="fragment_m_f_beginners"
-        tools:layout="@layout/fragment_m_f_beginners" />
+        tools:layout="@layout/fragment_m_f_sip_beginners" />
     <fragment
         android:id="@+id/mutualFundSIP500Fragment"
         android:name="com.example.ssadhan.MutualFundSIP500Fragment"
         android:label="fragment_mutual_fund_s_i_p500"
-        tools:layout="@layout/fragment_mutual_fund_s_i_p500" />
+        tools:layout="@layout/fragment_mf_sip500_transact" />
     <fragment
         android:id="@+id/MFSIP100Fragment"
         android:name="com.example.ssadhan.MFSIP100Fragment"
         android:label="fragment_m_f_s_i_p100"
-        tools:layout="@layout/fragment_m_f_s_i_p100" />
+        tools:layout="@layout/fragment_m_f_sip100_transact" />
 </navigation>
