@@ -18,4 +18,6 @@
     <string name="mutual_funds">Mutual funds</string>
     <string name="knowledge">Knowledge</string>
     <string name="profile">Profile</string>
+    <string name="easy_secure">Easy &amp;\nSecure</string>
+    <string name="price_below">Price below \n&lt;500 </string>
 </resources>

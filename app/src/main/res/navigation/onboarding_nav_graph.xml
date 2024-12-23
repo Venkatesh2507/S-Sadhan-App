@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/onboarding_nav_graph"
+    app:startDestination="@id/languageFragment">
+    <fragment
+        android:id="@+id/languageFragment"
+        android:name="com.example.ssadhan.LanguageFragment"
+        android:label="fragment_language"
+        tools:layout="@layout/fragment_language" >
+        <action
+            android:id="@+id/action_languageFragment_to_enterMobileFragment"
+            app:destination="@id/enterMobileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/enterMobileFragment"
+        android:name="com.example.ssadhan.EnterMobileFragment"
+        android:label="fragment_enter_mobile"
+        tools:layout="@layout/fragment_enter_mobile" >
+        <action
+            android:id="@+id/action_enterMobileFragment_to_verifyOtpFragement"
+            app:destination="@id/verifyOtpFragement"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/verifyOtpFragement"
+        android:name="com.example.ssadhan.VerifyOtpFragement"
+        android:label="fragment_verify_otp_fragement"
+        tools:layout="@layout/fragment_verify_otp_fragement" >
+        <action
+            android:id="@+id/action_verifyOtpFragement_to_profileReadyFragment"
+            app:destination="@id/profileReadyFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/profileReadyFragment"
+        android:name="com.example.ssadhan.ProfileReadyFragment"
+        android:label="fragment_profile_ready"
+        tools:layout="@layout/fragment_profile_ready" >
+        <action
+            android:id="@+id/action_profileReadyFragment_to_enterPinFragment2"
+            app:destination="@id/enterPinFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/enterPinFragment2"
+        android:name="com.example.ssadhan.EnterPinFragment"
+        android:label="fragment_enter_pin"
+        tools:layout="@layout/fragment_enter_pin" >
+        <action
+            android:id="@+id/action_enterPinFragment2_to_MFKYCOnboradingFragment2"
+            app:destination="@id/MFKYCOnboradingFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/MFKYCOnboradingFragment2"
+        android:name="com.example.ssadhan.MFKYCOnboradingFragment"
+        android:label="fragment_m_f_k_y_c_onborading"
+        tools:layout="@layout/fragment_m_f_k_y_c_onborading" >
+        <action
+            android:id="@+id/action_MFKYCOnboradingFragment2_to_MFKYCOpenFragment"
+            app:destination="@id/MFKYCOpenFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/MFKYCOpenFragment"
+        android:name="com.example.ssadhan.MFKYCOpenFragment"
+        android:label="fragment_m_f_k_y_c_open"
+        tools:layout="@layout/fragment_m_f_k_y_c_open" >
+        <action
+            android:id="@+id/action_MFKYCOpenFragment_to_KYCCheckFragment"
+            app:destination="@id/KYCCheckFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/KYCCheckFragment"
+        android:name="com.example.ssadhan.KYCCheckFragment"
+        android:label="fragment_k_y_c_check"
+        tools:layout="@layout/fragment_k_y_c_check" >
+        <action
+            android:id="@+id/action_KYCCheckFragment_to_KYCCheckCompletionFragment"
+            app:destination="@id/KYCCheckCompletionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/KYCCheckCompletionFragment"
+        android:name="com.example.ssadhan.KYCCheckCompletionFragment"
+        android:label="fragment_k_y_c_check_completion"
+        tools:layout="@layout/fragment_k_y_c_check_completion" >
+        <action
+            android:id="@+id/action_KYCCheckCompletionFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.example.ssadhan.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+</navigation>

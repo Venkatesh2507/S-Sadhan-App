@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="none"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".SIPFragment">
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -68,6 +69,7 @@
                 >
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/btn_top_performance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -100,9 +102,6 @@
                             />
 
                     </LinearLayout>
-
-
-
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
@@ -141,6 +140,7 @@
 
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/btn_beginners"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -180,23 +180,19 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/sipCv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/upperLayout"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="25dp"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="10dp"
-            >
+
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btn_explore_500"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/upperLayout"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="25dp"
                 android:padding="10dp"
-                android:background="#fef7d9"
+                android:background="@drawable/sip_500_banner_background"
                 >
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/newLayout"
@@ -265,7 +261,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="SPI with just Rs. 50/month"
+                        android:text="SPI with just Rs. 500/month"
                         android:textSize="17sp"
                         android:textStyle="bold"
                         android:textColor="@color/black"
@@ -289,156 +285,139 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </androidx.cardview.widget.CardView>
-
 
         <LinearLayout
             android:id="@+id/linearLayout3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/sipCv"
+            app:layout_constraintTop_toBottomOf="@+id/btn_explore_500"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:orientation="horizontal"
             android:padding="10dp"
-
             android:layout_marginTop="30dp">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="10dp"
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btn_performance"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingVertical="10dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/smart_sip_background"
                 >
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingVertical="10dp"
-                    android:background="@drawable/smart_sip_background"
+
+                <LinearLayout
+                    android:id="@+id/performanceLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical"
+
                     >
 
-                    <LinearLayout
-                        android:id="@+id/linearLayout1"
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:layout_marginStart="10dp"
-                        android:orientation="vertical"
-
-                        >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Performance"
-                            android:textSize="19sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"
-                            android:fontFamily="@font/inder"
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Pick schemes based \non performance"
-                            android:textSize="15sp"
-                            android:textColor="@color/black"
-                            />
-                    </LinearLayout>
-
-                    <ImageView
-                        android:id="@+id/imageView5"
-                        android:layout_width="17dp"
-                        android:layout_height="13dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginStart="10dp"
-                        android:src="@drawable/front_arrow"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/linearLayout1" />
-
-
-                    <ImageView
-                        android:layout_width="85dp"
-                        android:layout_height="66dp"
-                        android:src="@drawable/trophies"
-                        android:layout_marginStart="70dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/imageView5"
-                        app:layout_constraintTop_toBottomOf="@+id/linearLayout1" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                app:cardCornerRadius="10dp"
-                android:background="#FF2D55"
-                >
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingVertical="10dp"
-                    android:background="@drawable/smart_sip_background"
-                    >
-
-                    <LinearLayout
-                        android:id="@+id/linearLayout2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:orientation="vertical"
-                        android:layout_marginStart="10dp"
-                        >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Risk"
-                            android:textSize="19sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"
-                            android:fontFamily="@font/inder"
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Pick schemes per your \nrisk appetite"
-                            android:textSize="15sp"
-                            android:textColor="@color/black"
-                            />
-                    </LinearLayout>
-
-                    <ImageView
-                        android:id="@+id/imageView6"
-                        android:layout_width="17dp"
-                        android:layout_height="13dp"
-                        android:layout_marginStart="10dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-                        android:src="@drawable/front_arrow"
-                        android:layout_marginTop="20dp"
+                        android:text="Performance"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/inder"
                         />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pick schemes based \non performance"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="13dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/front_arrow"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/performanceLayout" />
 
 
-                    <ImageView
-                        android:layout_width="82dp"
-                        android:layout_height="62dp"
-                        android:src="@drawable/clock"
-                        android:layout_marginStart="75dp"
-                        app:layout_constraintStart_toEndOf="@+id/imageView6"
-                        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+                <ImageView
+                    android:layout_width="85dp"
+                    android:layout_height="66dp"
+                    android:src="@drawable/trophies"
+                    android:layout_marginStart="70dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/performanceLayout" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </androidx.cardview.widget.CardView>
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btn_risk"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingVertical="10dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/smart_sip_background"
+                >
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Risk"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/inder"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pick schemes per your \nrisk appetite"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="13dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/front_arrow"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout1" />
+                <ImageView
+                    android:layout_width="85dp"
+                    android:layout_height="66dp"
+                    android:src="@drawable/clock"
+                    android:layout_marginStart="70dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
-
         <androidx.cardview.widget.CardView
-            android:id="@+id/kycCv"
+            android:id="@+id/btn_explore_100"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
@@ -549,9 +528,9 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/kycCv"
+            app:layout_constraintTop_toBottomOf="@+id/btn_explore_100"
             android:layout_marginTop="20dp"
-            android:layout_marginHorizontal="20dp"
+            android:layout_marginHorizontal="15dp"
             app:cardCornerRadius="10dp"
             >
 
@@ -577,7 +556,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/whatsappLayout"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_whatsapp_link"
                     android:orientation="vertical"
                     android:layout_marginStart="80dp"
                     >
@@ -616,7 +595,7 @@
 
                 </LinearLayout>
                 <LinearLayout
-                    android:id="@+id/whatsappLayout"
+                    android:id="@+id/tv_whatsapp_link"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -658,16 +637,18 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/supportCardView"
     android:layout_marginTop="30dp"
+    android:layout_marginBottom="20dp"
     app:cardCornerRadius="10dp"
-    android:layout_marginHorizontal="10dp"
+    android:layout_marginHorizontal="15dp"
     >
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    android:background="@drawable/smart_sip_background"
+    android:background="@drawable/sip_banner_backgroound"
     >
 
     <LinearLayout
@@ -684,6 +665,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Calculate"
+            android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:fontFamily="@font/inder"
@@ -693,6 +675,7 @@
             android:layout_height="wrap_content"
             android:textColor="#FE3F8F"
             android:textSize="24sp"
+            android:textStyle="bold"
             android:fontFamily="@font/inder"
             android:text="Lumpsum and SIP"
         />
@@ -702,6 +685,7 @@
             android:text="Returns"
             android:textColor="@color/black"
             android:textSize="24sp"
+            android:textStyle="bold"
             android:fontFamily="@font/inder"
             />
     </LinearLayout>
@@ -735,11 +719,12 @@
 
     </LinearLayout>
 <ImageView
-    android:layout_width="160dp"
+    android:layout_width="140dp"
     android:layout_height="166dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toTopOf="parent"
     android:src="@drawable/calculator"
+    android:scaleType="centerCrop"
     />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

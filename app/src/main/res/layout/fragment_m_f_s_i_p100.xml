@@ -1,1060 +1,251 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MFSIP100Fragment">
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/upperLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/cardview_mf_gradient_background"
+        android:layout_height="match_parent"
         >
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="53dp"
-            android:layout_height="50dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/back_filled"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            />
-
-        <ImageView
-            android:id="@+id/help"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_margin="10dp"
-            android:src="@drawable/help_transparent"
-            />
-        <ImageView
-            android:id="@+id/smartSearchIv"
-            android:layout_width="135dp"
-            android:layout_height="61dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="10dp"
-            android:src="@drawable/sip_100"
-
-            />
-        <LinearLayout
+        <ProgressBar
+            android:id="@+id/progressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/smartSearchIv"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            >
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    app:cardCornerRadius="10dp"
-                    >
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:paddingHorizontal="13dp"
-                        android:paddingVertical="10dp"
-                        >
-                        <ImageView
-                            android:layout_width="46dp"
-                            android:layout_height="46dp"
-                            android:src="@drawable/amc"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            />
-
-
-
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                </androidx.cardview.widget.CardView>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Reputed\n AMC"
-                    android:textSize="11sp"
-                    android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/inder"
-                    android:layout_gravity="center"
-                    />
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    app:cardCornerRadius="10dp"
-                    >
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:paddingHorizontal="13dp"
-                        android:paddingVertical="10dp"
-                        >
-                        <ImageView
-                            android:layout_width="46dp"
-                            android:layout_height="46dp"
-                            android:src="@drawable/trophy"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            />
-
-
-
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                </androidx.cardview.widget.CardView>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Top\nPerfroming"
-                    android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:textSize="11sp"
-                    android:gravity="center"
-                    android:fontFamily="@font/inder"
-                    android:layout_gravity="center"
-                    />
-
-
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    app:cardCornerRadius="10dp"
-                    >
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:paddingHorizontal="13dp"
-                        android:paddingVertical="10dp"
-                        >
-                        <ImageView
-                            android:layout_width="46dp"
-                            android:layout_height="46dp"
-                            android:src="@drawable/coin"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            />
-
-
-
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                </androidx.cardview.widget.CardView>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Small\nAmount"
-                    android:textColor="@color/white"
-                    android:textSize="11sp"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:fontFamily="@font/inder"
-                    android:layout_gravity="center"
-                    />
-
-
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-        <ImageView
-            android:layout_width="185dp"
-            android:layout_height="188dp"
-            android:src="@drawable/plant"
-            android:scaleType="centerCrop"
-            android:layout_marginEnd="-20dp"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="85dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upperLayout"
-        android:layout_marginTop="280dp"
-        >
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/upperLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/cardview_mf_gradient_background"
             >
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="10dp"
 
-                >
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="5dp"
-                    >
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/companyProfile"
-                        android:layout_width="93dp"
-                        android:layout_height="80dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        android:layout_margin="10dp"
-                        android:padding="3dp"
-                        android:background="@drawable/logo_background"
-                        >
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/bajaj_finserv"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            android:scaleType="fitCenter"
-                            />
-
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                    <TextView
-                        android:id="@+id/titleTv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintStart_toEndOf="@+id/companyProfile"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:text="Bajaj Finserv Mutual Fund Advantage \nFund - Growth "
-                        android:textSize="16sp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="5dp"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/inder"
-                        />
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/investmentLayout"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintStart_toEndOf="@+id/companyProfile"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:orientation="horizontal"
-                        android:layout_marginStart="120dp"
-                        >
-
-                        <TextView
-                            android:id="@+id/moderate1Tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Moderate"
-                            android:paddingHorizontal="10dp"
-                            android:paddingVertical="3dp"
-                            android:background="@drawable/textview_background_stocks"
-                            android:textColor="@color/orange"
-                            android:textStyle="bold"
-                            android:textSize="11sp"
-                            android:fontFamily="@font/inder"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            />
-
-                        <TextView
-                            android:id="@+id/navTv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintStart_toEndOf="@+id/moderate1Tv"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/sipTv"
-                            android:text="NAV: 1234.56"
-                            android:textSize="11sp"
-                            android:paddingVertical="3dp"
-                            android:textColor="@color/black"
-                            android:fontFamily="@font/inder"
-                            android:background="@drawable/textview_nav_background"
-                            android:paddingHorizontal="5dp"
-                            />
-
-                        <LinearLayout
-                            android:id="@+id/sipTv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            android:paddingHorizontal="10dp"
-                            android:paddingVertical="3dp"
-                            android:background="@drawable/textview_background_sip"
-                            android:layout_marginEnd="5dp"
-                            >
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Minimum SIP:"
-                                android:textSize="11sp"
-                                android:textColor="@color/black"
-                                />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="5000"
-                                android:textSize="11sp"
-                                android:textColor="@color/black"
-                                android:textStyle="bold"
-                                />
-                        </LinearLayout>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </androidx.cardview.widget.CardView>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                app:layout_constraintTop_toBottomOf="@+id/investmentLayout"
-                android:background="@android:color/darker_gray"
-                android:layout_marginHorizontal="10dp"
-                />
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="10dp"
-
-                >
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="5dp"
-                    >
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/companyProfile2"
-                        android:layout_width="93dp"
-                        android:layout_height="80dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        android:layout_margin="10dp"
-                        android:padding="3dp"
-                        android:background="@drawable/logo_background"
-                        >
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/aditya_birla"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            android:scaleType="fitCenter"
-                            />
-
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                    <TextView
-                        android:id="@+id/titleTv2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintStart_toEndOf="@+id/companyProfile2"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:text="Aditya Birla Sun life Equity Advantage\nFund Growth"
-                        android:textSize="16sp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="5dp"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/inder"
-                        />
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/investmentLayout2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintStart_toEndOf="@+id/companyProfile2"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:orientation="horizontal"
-                        android:layout_marginStart="120dp"
-                        >
-
-                        <TextView
-                            android:id="@+id/low1Tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Low"
-                            android:paddingHorizontal="25dp"
-                            android:paddingVertical="3dp"
-                            android:background="@drawable/textview_background_low"
-                            android:textColor="@color/green"
-                            android:textStyle="bold"
-                            android:textSize="11sp"
-                            android:fontFamily="@font/inder"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            />
-
-                        <TextView
-                            android:id="@+id/nav2Tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintStart_toEndOf="@+id/low1Tv"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/sip2Tv"
-                            android:text="NAV: 1234.56"
-                            android:textSize="11sp"
-                            android:paddingVertical="3dp"
-                            android:textColor="@color/black"
-                            android:fontFamily="@font/inder"
-                            android:background="@drawable/textview_nav_background"
-                            android:paddingHorizontal="5dp"
-                            />
-
-                        <LinearLayout
-                            android:id="@+id/sip2Tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            android:paddingHorizontal="10dp"
-                            android:paddingVertical="3dp"
-                            android:background="@drawable/textview_background_sip"
-                            android:layout_marginEnd="5dp"
-                            >
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Minimum SIP:"
-                                android:textSize="11sp"
-                                android:textColor="@color/black"
-                                />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="5000"
-                                android:textSize="11sp"
-                                android:textColor="@color/black"
-                                android:textStyle="bold"
-                                />
-                        </LinearLayout>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </androidx.cardview.widget.CardView>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                app:layout_constraintTop_toBottomOf="@+id/investmentLayout"
-                android:background="@android:color/darker_gray"
-                android:layout_marginHorizontal="10dp"
-                />
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="10dp"
-
-                >
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="5dp"
-                    >
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/companyProfile3"
-                        android:layout_width="93dp"
-                        android:layout_height="80dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        android:layout_margin="10dp"
-                        android:padding="3dp"
-                        android:background="@drawable/logo_background"
-                        >
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/motilal_oswal"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-
-                            />
-
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                    <TextView
-                        android:id="@+id/title3Tv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintStart_toEndOf="@+id/companyProfile3"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:text="Motilal Oswal Midcap Fund Direct\nGrowth"
-                        android:textSize="16sp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="5dp"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/inder"
-                        />
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/investmentLayout3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintStart_toEndOf="@+id/companyProfile3"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:orientation="horizontal"
-                        android:layout_marginStart="120dp"
-                        >
-
-                        <TextView
-                            android:id="@+id/highTv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="High"
-                            android:paddingHorizontal="23dp"
-                            android:paddingVertical="3dp"
-                            android:background="@drawable/textview_background_high"
-                            android:textColor="@color/pink"
-                            android:textStyle="bold"
-                            android:textSize="11sp"
-                            android:fontFamily="@font/inder"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            />
-
-                        <TextView
-                            android:id="@+id/nav3Tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintStart_toEndOf="@+id/highTv"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/sip3Tv"
-                            android:text="NAV: 1234.56"
-                            android:textSize="11sp"
-                            android:paddingVertical="3dp"
-                            android:textColor="@color/black"
-                            android:fontFamily="@font/inder"
-                            android:background="@drawable/textview_nav_background"
-                            android:paddingHorizontal="5dp"
-                            />
-
-                        <LinearLayout
-                            android:id="@+id/sip3Tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            android:paddingHorizontal="10dp"
-                            android:paddingVertical="3dp"
-                            android:background="@drawable/textview_background_sip"
-                            android:layout_marginEnd="5dp"
-                            >
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Minimum SIP:"
-                                android:textSize="11sp"
-                                android:textColor="@color/black"
-                                />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="5000"
-                                android:textSize="11sp"
-                                android:textColor="@color/black"
-                                android:textStyle="bold"
-                                />
-                        </LinearLayout>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </androidx.cardview.widget.CardView>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                app:layout_constraintTop_toBottomOf="@+id/investmentLayout"
-                android:background="@android:color/darker_gray"
-                android:layout_marginHorizontal="10dp"
-                />
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="10dp"
-
-                >
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="5dp"
-                    >
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/companyProfile4"
-                        android:layout_width="93dp"
-                        android:layout_height="80dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        android:layout_margin="10dp"
-                        android:padding="3dp"
-                        android:background="@drawable/logo_background"
-                        >
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/sbi"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            android:scaleType="fitCenter"
-                            />
-
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                    <TextView
-                        android:id="@+id/title4Tv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintStart_toEndOf="@+id/companyProfile4"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:text="SBI PSU Direct Plan Growth December \n2024"
-                        android:textSize="16sp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="5dp"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/inder"
-                        />
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/investmentLayout4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintStart_toEndOf="@+id/companyProfile4"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:orientation="horizontal"
-                        android:layout_marginStart="120dp"
-                        >
-
-                        <TextView
-                            android:id="@+id/moderate2Tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Moderate"
-                            android:paddingHorizontal="10dp"
-                            android:paddingVertical="3dp"
-                            android:background="@drawable/textview_background_stocks"
-                            android:textColor="@color/orange"
-                            android:textStyle="bold"
-                            android:textSize="11sp"
-                            android:fontFamily="@font/inder"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            />
-
-                        <TextView
-                            android:id="@+id/nav4Tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintStart_toEndOf="@+id/moderate2Tv"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/sip4Tv"
-                            android:text="NAV: 1234.56"
-                            android:textSize="11sp"
-                            android:paddingVertical="3dp"
-                            android:textColor="@color/black"
-                            android:fontFamily="@font/inder"
-                            android:background="@drawable/textview_nav_background"
-                            android:paddingHorizontal="5dp"
-                            />
-
-                        <LinearLayout
-                            android:id="@+id/sip4Tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            android:paddingHorizontal="10dp"
-                            android:paddingVertical="3dp"
-                            android:background="@drawable/textview_background_sip"
-                            android:layout_marginEnd="5dp"
-                            >
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Minimum SIP:"
-                                android:textSize="11sp"
-                                android:textColor="@color/black"
-                                />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="5000"
-                                android:textSize="11sp"
-                                android:textColor="@color/black"
-                                android:textStyle="bold"
-                                />
-                        </LinearLayout>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </androidx.cardview.widget.CardView>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                app:layout_constraintTop_toBottomOf="@+id/investmentLayout"
-                android:background="@android:color/darker_gray"
-                android:layout_marginHorizontal="10dp"
-                />
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="10dp"
-
-                >
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="5dp"
-                    >
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/companyProfile5"
-                        android:layout_width="93dp"
-                        android:layout_height="80dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        android:layout_margin="10dp"
-                        android:padding="3dp"
-                        android:background="@drawable/logo_background"
-                        >
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/nippon"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            android:scaleType="fitCenter"
-                            />
-
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                    <TextView
-                        android:id="@+id/titleTv5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintStart_toEndOf="@+id/companyProfile5"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:text="Nippon India Small Cap Fund Direct\nGrowth"
-                        android:textSize="16sp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="5dp"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/inder"
-                        />
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/investmentLayout5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintStart_toEndOf="@+id/companyProfile5"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:orientation="horizontal"
-                        android:layout_marginStart="120dp"
-                        >
-
-                        <TextView
-                            android:id="@+id/low2Tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Low"
-                            android:paddingHorizontal="25dp"
-                            android:paddingVertical="3dp"
-                            android:background="@drawable/textview_background_low"
-                            android:textColor="@color/green"
-                            android:textStyle="bold"
-                            android:textSize="11sp"
-                            android:fontFamily="@font/inder"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            />
-
-                        <TextView
-                            android:id="@+id/nav5Tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintStart_toEndOf="@+id/low2Tv"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/sip5Tv"
-                            android:text="NAV: 1234.56"
-                            android:textSize="11sp"
-                            android:paddingVertical="3dp"
-                            android:textColor="@color/black"
-                            android:fontFamily="@font/inder"
-                            android:background="@drawable/textview_nav_background"
-                            android:paddingHorizontal="5dp"
-                            />
-
-                        <LinearLayout
-                            android:id="@+id/sip5Tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            android:paddingHorizontal="10dp"
-                            android:paddingVertical="3dp"
-                            android:background="@drawable/textview_background_sip"
-                            android:layout_marginEnd="5dp"
-                            >
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Minimum SIP:"
-                                android:textSize="11sp"
-                                android:textColor="@color/black"
-                                />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="5000"
-                                android:textSize="11sp"
-                                android:textColor="@color/black"
-                                android:textStyle="bold"
-                                />
-                        </LinearLayout>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </androidx.cardview.widget.CardView>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                app:layout_constraintTop_toBottomOf="@+id/investmentLayout"
-                android:background="@android:color/darker_gray"
-                android:layout_marginHorizontal="10dp"
-                />
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="10dp"
-
-                >
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="5dp"
-                    >
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/companyProfile6"
-                        android:layout_width="93dp"
-                        android:layout_height="80dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        android:layout_margin="10dp"
-                        android:padding="3dp"
-                        android:background="@drawable/logo_background"
-                        >
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/quant"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            android:scaleType="centerInside"
-                            />
-
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                    <TextView
-                        android:id="@+id/title6Tv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintStart_toEndOf="@+id/companyProfile6"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:text="Bajaj Finserv Mutual Fund Advantage \nFund - Growth "
-                        android:textSize="16sp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="5dp"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/inder"
-                        />
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/investmentLayout6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintStart_toEndOf="@+id/companyProfile6"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:orientation="horizontal"
-                        android:layout_marginStart="120dp"
-                        >
-
-                        <TextView
-                            android:id="@+id/high2Tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="High"
-                            android:paddingHorizontal="23dp"
-                            android:paddingVertical="3dp"
-                            android:background="@drawable/textview_background_high"
-                            android:textColor="@color/pink"
-                            android:textStyle="bold"
-                            android:textSize="11sp"
-                            android:fontFamily="@font/inder"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            />
-
-                        <TextView
-                            android:id="@+id/nav6Tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintStart_toEndOf="@+id/high2Tv"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/sip6Tv"
-                            android:text="NAV: 1234.56"
-                            android:textSize="11sp"
-                            android:paddingVertical="3dp"
-                            android:textColor="@color/black"
-                            android:fontFamily="@font/inder"
-                            android:background="@drawable/textview_nav_background"
-                            android:paddingHorizontal="5dp"
-                            />
-
-                        <LinearLayout
-                            android:id="@+id/sip6Tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            android:paddingHorizontal="10dp"
-                            android:paddingVertical="3dp"
-                            android:background="@drawable/textview_background_sip"
-                            android:layout_marginEnd="5dp"
-                            >
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Minimum SIP:"
-                                android:textSize="11sp"
-                                android:textColor="@color/black"
-                                />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="5000"
-                                android:textSize="11sp"
-                                android:textColor="@color/black"
-                                android:textStyle="bold"
-                                />
-                        </LinearLayout>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </androidx.cardview.widget.CardView>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                app:layout_constraintTop_toBottomOf="@+id/investmentLayout"
-                android:background="@android:color/darker_gray"
-                android:layout_marginHorizontal="10dp"
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="53dp"
+                android:layout_height="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/back_filled"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
                 />
 
-        </LinearLayout>
-    </ScrollView>
+            <ImageView
+                android:id="@+id/help"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="10dp"
+                android:src="@drawable/help_transparent"
+                />
+            <ImageView
+                android:id="@+id/smartSearchIv"
+                android:layout_width="145dp"
+                android:layout_height="61dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/sip_100"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/smartSearchIv"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    >
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cl_reputed_amc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="10dp"
+                        >
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="10dp"
+                            >
+                            <ImageView
+                                android:layout_width="46dp"
+                                android:layout_height="46dp"
+                                android:src="@drawable/amc"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reputed\n  AMCs"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="11sp"
+                        android:fontFamily="@font/inder"
+                        android:layout_gravity="center"
+                        />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cl_top_performing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="10dp"
+                        >
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="10dp"
+                            >
+                            <ImageView
+                                android:layout_width="46dp"
+                                android:layout_height="46dp"
+                                android:src="@drawable/trophy"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                />
+
+
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Top\nPerforming"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="11sp"
+                        android:fontFamily="@font/inder"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        />
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cl_small_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="10dp"
+                        >
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="10dp"
+                            >
+                            <ImageView
+                                android:layout_width="46dp"
+                                android:layout_height="46dp"
+                                android:src="@drawable/coin"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                />
+
+
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Small\nAmount"
+                        android:textSize="11sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:fontFamily="@font/inder"
+                        android:layout_gravity="center"
+                        />
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="192dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/help"
+                android:src="@drawable/plant"
+                android:layout_marginTop="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_100iInvest"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/upperLayout"
+            tools:listitem="@layout/mf_cardview"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>

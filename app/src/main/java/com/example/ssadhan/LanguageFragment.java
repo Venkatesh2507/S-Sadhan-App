@@ -2,27 +2,31 @@ package com.example.ssadhan;
 
 import android.graphics.Color;
 import android.os.Bundle;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.NavigationUI;
+
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import com.example.ssadhan.databinding.FragmentLanguageBinding;
 
-import com.example.ssadhan.databinding.ActivityLanguageBinding;
-
-
-public class LanguageActivity extends AppCompatActivity {
-    public ActivityLanguageBinding binding;
+public class LanguageFragment extends Fragment {
+    public FragmentLanguageBinding binding;
     private int selectedCV = 0;
     ConstraintLayout layout;
     TextView textView1,textView2;
     ImageView rb;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        binding = ActivityLanguageBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        binding = FragmentLanguageBinding.inflate(getLayoutInflater());
 
         binding.englishCv.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,6 +124,13 @@ public class LanguageActivity extends AppCompatActivity {
                 }
             }
         });
+        binding.submitBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_languageFragment_to_enterMobileFragment);
+            }
+        });
 
+        return binding.getRoot();
     }
 }

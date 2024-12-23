@@ -23,7 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/button_background"
-                android:paddingBottom="455dp"
+                android:paddingBottom="465dp"
                 />
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -68,6 +68,7 @@
                     android:text="@string/collections"
                     android:textSize="19sp"
                     android:textStyle="bold"
+                    android:layout_marginTop="10dp"
                     android:textColor="#FF9500"
                     />
                 <LinearLayout
@@ -232,13 +233,14 @@
 
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/exploreBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout"
                     app:layout_constraintEnd_toEndOf="parent"
                     android:background="@drawable/button_background"
-                    android:text="Proceed"
+                    android:text="Explore"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textSize="21sp"

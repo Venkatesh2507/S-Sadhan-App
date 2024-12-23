@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation"
+    app:startDestination="@id/mutualFundFragment">
+
+    <fragment
+        android:id="@+id/mutualFundFragment"
+        android:name="com.example.ssadhan.MutualFundFragment"
+        android:label="fragment_mutual_fund"
+        tools:layout="@layout/fragment_mutual_fund" >
+        <action
+            android:id="@+id/action_mutualFundFragment_to_stockWithProtfolioFragment"
+            app:destination="@id/stockWithProtfolioFragment" />
+        <action
+            android:id="@+id/action_mutualFundFragment_to_profileFragment2"
+            app:destination="@id/profileFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/stockWithProtfolioFragment"
+        android:name="com.example.ssadhan.StockWithProtfolioFragment"
+        android:label="fragment_stock_with_protfolio"
+        tools:layout="@layout/fragment_stock_with_protfolio" >
+        <action
+            android:id="@+id/action_stockWithProtfolioFragment_to_mutualFundFragment"
+            app:destination="@id/mutualFundFragment" />
+        <action
+            android:id="@+id/action_stockWithProtfolioFragment_to_profileFragment2"
+            app:destination="@id/profileFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="com.example.ssadhan.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment2_to_mutualFundFragment"
+            app:destination="@id/mutualFundFragment" />
+        <action
+            android:id="@+id/action_profileFragment2_to_stockWithProtfolioFragment"
+            app:destination="@id/stockWithProtfolioFragment" />
+    </fragment>
+</navigation>

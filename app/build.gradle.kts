@@ -39,10 +39,13 @@ android {
 dependencies {
 
     implementation(libs.appcompat)
-    implementation ("com.github.denzcoskun:ImageSlideshow:0.1.2")
+    implementation (libs.imageslideshow)
     implementation(libs.material)
     implementation (libs.chaosleung.pinview)
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
     implementation(libs.activity)
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01")
     implementation(libs.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

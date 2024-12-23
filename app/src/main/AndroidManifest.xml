@@ -13,13 +13,22 @@
         android:theme="@style/Theme.SSadhan"
         tools:targetApi="31">
         <activity
+            android:name=".LumpsumActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SIPActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LandingScreenActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
             android:exported="false" />
         <activity
-            android:name=".LanguageActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

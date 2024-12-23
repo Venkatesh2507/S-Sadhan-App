@@ -6,121 +6,136 @@
     android:background="#EDF4FF"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MFKYCOpenFragment">
-    <ImageView
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/left"
-        android:layout_margin="10dp"
-        />
-    <LinearLayout
-        android:id="@+id/linearLayout"
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/left"
+            android:layout_margin="10dp"
+            />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="90dp"
-        android:orientation="vertical"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Quick and Easy"
-            android:textSize="20sp"
-            android:fontFamily="@font/inder"
-            android:layout_gravity="center"
-            android:textColor="@color/black"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Onboarding"
-            android:textSize="34sp"
-            android:fontFamily="@font/inder"
-            android:textColor="@color/black"
-            android:layout_gravity="center"
-            android:textStyle="bold"
-            />
-    </LinearLayout>
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="358dp"
-        android:layout_height="320dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/online_payment"
+        android:visibility="invisible"
         />
-    <LinearLayout
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quick and Easy"
+                android:textSize="20sp"
+                android:fontFamily="@font/inder"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Onboarding"
+                android:textSize="34sp"
+                android:fontFamily="@font/inder"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="358dp"
+            android:layout_height="320dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/online_payment"
+            />
+        <LinearLayout
 
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
-        android:orientation="vertical"
-        >
-        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/number_background"
-            android:padding="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginHorizontal="15dp"
-            android:hint="Please enter your pan"
-            />
-       <androidx.appcompat.widget.AppCompatEditText
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:background="@drawable/number_background"
-           android:padding="15dp"
-           android:layout_marginTop="15dp"
-           android:layout_marginHorizontal="15dp"
-           android:hint="Enter your DOB"
-           />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+            android:orientation="vertical"
+            >
 
-    </LinearLayout>
-<LinearLayout
-    android:id="@+id/linearLayout3"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-    app:layout_constraintBottom_toBottomOf="parent"
-    android:orientation="vertical"
-    >
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Let's check your KYC status"
-        android:textSize="18sp"
-        android:fontFamily="@font/inder"
-        android:textColor="@color/black"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"
-        />
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp"
-        android:layout_marginHorizontal="20dp"
-        android:text="Submit"
-        android:textStyle="bold"
-        android:textAllCaps="false"
-        android:background="@drawable/button_background"
-        android:textColor="@color/white"
-        android:textSize="21sp"
-        android:fontFamily="@font/inder"
-        />
-</LinearLayout>
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/ti_panNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/number_background"
+                android:hint="Please enter your PAN"
+                android:padding="15dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/ti_dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/number_background"
+                android:padding="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="15dp"
+                android:hint="Please enter your DOB"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Let's check your KYC status"
+                android:textSize="18sp"
+                android:fontFamily="@font/inder"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_verify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:text="Submit"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:background="@drawable/button_background"
+                android:textColor="@color/white"
+                android:textSize="21sp"
+                android:fontFamily="@font/inder"
+                />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

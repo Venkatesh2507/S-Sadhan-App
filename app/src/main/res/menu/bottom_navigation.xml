@@ -6,7 +6,7 @@
     />
     <item android:id="@+id/mutualFundsFragment"
     android:title="@string/mutual_funds"
-    android:icon="@drawable/filled"
+    android:icon="@drawable/mf_filled"
     />
     <item android:id="@+id/knowledgeFragment"
         android:title="@string/knowledge"
