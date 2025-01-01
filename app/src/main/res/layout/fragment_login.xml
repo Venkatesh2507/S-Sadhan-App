@@ -20,16 +20,17 @@
     <com.denzcoskun.imageslider.ImageSlider
         android:id="@+id/sliderIv"
         android:layout_width="349dp"
-        android:layout_height="437dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/cardView"
-        app:iss_period="1000"
+        android:layout_height="407dp"
         app:iss_auto_cycle="true"
         app:iss_delay="1000"
+        app:iss_period="1000"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
 
-        />
+        app:layout_constraintVertical_bias="0.466" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
@@ -42,7 +43,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingTop="30dp"
+
             >
             <TextView
                 android:id="@+id/textView"
@@ -54,7 +55,8 @@
                 android:fontFamily="@font/inder"
                 android:textStyle="bold"
                 android:text="Verify your mobile number"
-                android:textSize="24sp"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
                 />
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/textInputLayout"
@@ -70,7 +72,7 @@
                 android:layout_marginHorizontal="10dp"
                 android:drawableStart="@drawable/baseline_phone_24"
                 android:hint="Enter your mobile number"
-                android:drawablePadding="10dp"
+                android:drawablePadding="13dp"
                 />
             <CheckBox
                 android:id="@+id/checkBox"
@@ -80,20 +82,22 @@
                 app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
                 style="@style/Widget.Material3.CompoundButton.CheckBox"
                 android:layout_marginTop="20dp"
+                android:checked="true"
                 android:layout_marginStart="10dp"
                 android:layout_marginBottom="10dp"
                 />
             <TextView
                 android:id="@+id/agreementTv"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toEndOf="@+id/checkBox"
                 app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toTopOf="@+id/submitBtn"
+                app:layout_constraintBottom_toTopOf="@+id/getOtpBtn"
                 android:fontFamily="@font/inder"
-                android:layout_marginEnd="19dp"
-                android:text="By signing up you are agreeing with our Terms of Use and  \nPrivacy Policy."
+                android:layout_marginHorizontal="10dp"
+
+                android:text="@string/policy"
                 android:layout_marginTop="15dp"
                 android:textSize="13sp"
                 />
@@ -107,7 +111,8 @@
                 android:paddingVertical="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="30dp"
                 android:background="@drawable/cardview_background"
                 android:fontFamily="@font/inder"
                 android:text="Submit"
@@ -117,40 +122,6 @@
                 android:textSize="20sp"
                 app:layout_constraintTop_toBottomOf="@+id/agreementTv"
                 />
-
-            <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/getOtpBtn"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                >
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Already have an account?"
-                    android:fontFamily="@font/inder"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sign in"
-                    android:layout_marginStart="5dp"
-                    android:textColor="@color/dark_blue"
-                    android:textStyle="bold"/>
-
-
-
-            </LinearLayout>
-
-
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

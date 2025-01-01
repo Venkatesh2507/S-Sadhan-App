@@ -33,7 +33,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="30dp"
         >
         <TextView
             android:id="@+id/textView"
@@ -46,6 +45,7 @@
             android:text="@string/enter_pin"
             android:textStyle="bold"
             android:textSize="24sp"
+            android:layout_marginTop="20dp"
             />
         <com.chaos.view.PinView
             android:id="@+id/pinLogin"
@@ -61,7 +61,6 @@
             android:inputType="number"
             android:padding="10dp"
             />
-
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="wrap_content"
@@ -98,7 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="15dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="30dp"
             android:background="@drawable/button_background"
             android:fontFamily="@font/inder"
             android:paddingVertical="10dp"
@@ -109,10 +108,9 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.482"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-            app:layout_constraintVertical_bias="0.0" />
+             />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

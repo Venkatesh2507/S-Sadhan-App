@@ -1,5 +1,7 @@
 package com.example.ssadhan;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -13,25 +15,34 @@ import android.view.ViewGroup;
 
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
-import com.example.ssadhan.databinding.FragmentEnterMobileBinding;
+import com.example.ssadhan.databinding.FragmentLoginBinding;
 
 import java.util.ArrayList;
 
 
 public class EnterMobileFragment extends Fragment {
-    private FragmentEnterMobileBinding binding;
+    private FragmentLoginBinding binding;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentEnterMobileBinding.inflate(getLayoutInflater());
+        binding = FragmentLoginBinding.inflate(getLayoutInflater());
 
 
         ArrayList<SlideModel> imageList = new ArrayList<>();
-        imageList.add(new SlideModel(R.drawable.image_slider_1, ScaleTypes.CENTER_INSIDE));
+        imageList.add(new SlideModel(R.drawable.image_slider_4, ScaleTypes.CENTER_INSIDE));
         imageList.add(new SlideModel(R.drawable.image_slider_2, ScaleTypes.CENTER_INSIDE));
+        imageList.add(new SlideModel(R.drawable.image_slider_1, ScaleTypes.CENTER_INSIDE));
         imageList.add(new SlideModel(R.drawable.image_slider_3, ScaleTypes.CENTER_INSIDE));
         binding.sliderIv.setImageList(imageList);
 
+
+        binding.agreementTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://backend.sadhanwealth.com/termAndConditions-en"));
+                startActivity(intent);
+            }
+        });
         binding.textInputLayout.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {

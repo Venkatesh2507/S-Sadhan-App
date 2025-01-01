@@ -19,5 +19,6 @@
     <string name="knowledge">Knowledge</string>
     <string name="profile">Profile</string>
     <string name="easy_secure">Easy &amp;\nSecure</string>
+    <string name="policy">By signing up you are agreeing with our <font color="#0000FF">Terms of use &amp; Privacy Policy</font></string>
     <string name="price_below">Price below \n&lt;500 </string>
 </resources>

@@ -10,15 +10,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.ssadhan.databinding.FragmentMutualFundBinding;
-import com.example.ssadhan.databinding.FragmentSIPBinding;
+import com.example.ssadhan.databinding.FragmentMutualFundSipTransactBinding;
+
 
 public class SIPFragment extends Fragment {
-    public FragmentSIPBinding binding;
+    public FragmentMutualFundSipTransactBinding binding;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentSIPBinding.inflate(getLayoutInflater());
+        binding = FragmentMutualFundSipTransactBinding.inflate(getLayoutInflater());
         return binding.getRoot();
 
 

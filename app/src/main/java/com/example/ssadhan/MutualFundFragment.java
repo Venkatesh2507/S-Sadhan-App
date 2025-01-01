@@ -9,16 +9,15 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.example.ssadhan.databinding.FragmentMutualFundBinding;
+import com.example.ssadhan.databinding.FragmentMutualFundTransactionBinding;
 
 public class MutualFundFragment extends Fragment {
 
-    public FragmentMutualFundBinding binding;
+    public FragmentMutualFundTransactionBinding binding;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-       binding = FragmentMutualFundBinding.inflate(getLayoutInflater());
+       binding = FragmentMutualFundTransactionBinding.inflate(getLayoutInflater());
 
 
        binding.tvSip.setOnClickListener(new View.OnClickListener() {

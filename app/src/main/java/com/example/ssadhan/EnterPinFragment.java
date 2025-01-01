@@ -8,16 +8,15 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.example.ssadhan.databinding.FragmentEnterPinBinding;
+import com.example.ssadhan.databinding.FragmentPinLoginBinding;
 
 public class EnterPinFragment extends Fragment {
 
-    public FragmentEnterPinBinding binding;
+    public FragmentPinLoginBinding binding;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentEnterPinBinding.inflate(getLayoutInflater());
+        binding = FragmentPinLoginBinding.inflate(getLayoutInflater());
 
         binding.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override

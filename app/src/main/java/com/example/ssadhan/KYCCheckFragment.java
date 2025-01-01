@@ -9,16 +9,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.ssadhan.databinding.FragmentKYCCheckBinding;
+import com.example.ssadhan.databinding.BottomSheetKycInProgressBinding;
 
 public class KYCCheckFragment extends Fragment {
 
 
-    public FragmentKYCCheckBinding binding;
+    public BottomSheetKycInProgressBinding binding;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentKYCCheckBinding.inflate(getLayoutInflater());
+        binding = BottomSheetKycInProgressBinding.inflate(getLayoutInflater());
 
         binding.btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -12,22 +12,24 @@ import android.view.ViewGroup;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
-import com.example.ssadhan.databinding.FragmentVerifyOtpFragementBinding;
+import com.example.ssadhan.databinding.FragmentVerifyOtpBinding;
+
 
 import java.util.ArrayList;
 
 
 public class VerifyOtpFragement extends Fragment {
-    public FragmentVerifyOtpFragementBinding binding;
+    public FragmentVerifyOtpBinding binding;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentVerifyOtpFragementBinding.inflate(getLayoutInflater());
+        binding = FragmentVerifyOtpBinding.inflate(getLayoutInflater());
 
         ArrayList<SlideModel> imageList = new ArrayList<>();
 
-        imageList.add(new SlideModel(R.drawable.image_slider_1, ScaleTypes.CENTER_INSIDE));
+        imageList.add(new SlideModel(R.drawable.image_slider_4, ScaleTypes.CENTER_INSIDE));
         imageList.add(new SlideModel(R.drawable.image_slider_2, ScaleTypes.CENTER_INSIDE));
+        imageList.add(new SlideModel(R.drawable.image_slider_1, ScaleTypes.CENTER_INSIDE));
         imageList.add(new SlideModel(R.drawable.image_slider_3, ScaleTypes.CENTER_INSIDE));
         binding.sliderIv.setImageList(imageList);
 

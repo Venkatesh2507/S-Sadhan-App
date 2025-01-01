@@ -9,16 +9,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.ssadhan.databinding.FragmentMFKYCOnboradingBinding;
+import com.example.ssadhan.databinding.BottomSheetKycVerifyBinding;
 
 public class MFKYCOnboradingFragment extends Fragment {
 
 
-    public FragmentMFKYCOnboradingBinding binding;
+    public BottomSheetKycVerifyBinding binding;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentMFKYCOnboradingBinding.inflate(inflater, container, false);
+        binding = BottomSheetKycVerifyBinding.inflate(inflater, container, false);
 
 
         binding.proceedBtn.setOnClickListener(new View.OnClickListener() {

@@ -10,15 +10,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.ssadhan.databinding.FragmentProfileBinding;
-import com.example.ssadhan.databinding.FragmentProfileReadyBinding;
+import com.example.ssadhan.databinding.FragmentSetPinCompletedBinding;
 
 public class ProfileReadyFragment extends Fragment {
 
-    public FragmentProfileReadyBinding binding;
+    public FragmentSetPinCompletedBinding binding;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentProfileReadyBinding.inflate(getLayoutInflater());
+        binding = FragmentSetPinCompletedBinding.inflate(getLayoutInflater());
 
         binding.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
